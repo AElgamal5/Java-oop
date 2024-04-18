@@ -27,6 +27,16 @@ public class Product {
         this.color = color;
     }
 
+    public Product(Product product) {
+        this(
+                product.name,
+                product.price,
+                product.discount,
+                product.quantity,
+                product.description,
+                product.color);
+    }
+
     public void display() {
         System.out.println("name: " + this.name);
         System.out.println("price: " + this.price);
