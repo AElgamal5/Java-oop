@@ -1,4 +1,3 @@
-import Outer.Inner;
 
 public class App {
     static int prop;
