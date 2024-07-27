@@ -22,6 +22,13 @@ public class App {
          * different signature.
          * 3- The determination of which method to call is made at compile time.
          * 
+         * - Run-Time Polymorphism (Dynamic Polymorphism):
+         * 1- This is achieved through method overriding.
+         * 2- Method overriding occurs when a subclass provides a specific
+         * implementation of a method that is already defined in its superclass.
+         * 3- The determination of which method to call is made at runtime, depending on
+         * the actual object's type that is being referenced.
+         * 
          * - Rules for overriding:
          * 1- There must an IS-A relationship aka inheritance.
          * 2- The method must be the same signature as in parent class.
@@ -36,6 +43,12 @@ public class App {
          * 
          * - Can't add '@Override' notation on static method in child class.
          * 
+         * - we can reference child form parent class and not vice versa:
+         * Parent obj = new Child();
+         * Child obj = new Parent(); //error
+         * 
+         * - With polymorphism we can achieve polymorphic aka generic array type:
+         * array that can accept different datatypes.
          */
 
         // 1- use getSalary() in each employee type
@@ -61,10 +74,19 @@ public class App {
         // System.out.println(emp.getBonus());//can't get method doesn't exist in parent
 
         // 3- static override ?
-        Employee.print();
-        SalariedEmployee.print();
-        Employee e1 = new SalariedEmployee("Amir", "Alex", "Frontend", "Amir@test.com", 400, 50);
-        e1.print(); // as parent class
+        // Employee.print();
+        // SalariedEmployee.print();
+        // Employee e1 = new SalariedEmployee("Amir", "Alex", "Frontend",
+        // "Amir@test.com", 400, 50);
+        // e1.print(); // as parent class
+
+        // 4- polymorphic aka generic array type
+        Employee[] emps = new Employee[4];
+
+        emps[0] = new Employee(null, null, null, null, 0);
+        emps[1] = new SalariedEmployee(null, null, null, null, 0, 0);
+        emps[2] = new DailyEmployee(null, null, null, null, 0, 0, 0);
+        emps[3] = new HourlyEmployee(null, null, null, null, 0, 0, 0);
     }
 
     // overloading
