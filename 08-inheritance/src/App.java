@@ -14,7 +14,7 @@ public class App {
          * - Constructors are not members so they are not inherited from superclass but
          * can be invoked by subclass, because any inherited member can be modified.
          * 
-         * - By default the default constructor will be invoked.
+         * - By default the default constructor or No-Arg constructor will be invoked.
          * 
          * - Superclass = parent class = base class = general class.
          * 
@@ -55,10 +55,35 @@ public class App {
          * |private__|_Yes_|__No___|__No____|_No__|
          * |______________________________________|
          * 
-         * - In class diagram
+         * - In class diagram:
          * 1- public => '+'
          * 2- private => '-'
          * 3- protected => '#'
+         * 
+         * - Super keyword used to call the parent constructor and must be the first
+         * statement in child constructor due to high priory.
+         * 
+         * - By default any class in java extends from built-in class called 'Object'
+         * which give any object some methods like:
+         * 1- 'obj.toString()': returns package and class name + hash code in hex format
+         * which used by JVM to get real address by object using hash algorithm.
+         * 2-'obj.hashCode()': returns object address in int format which used by JVM to
+         * access object in memory.
+         * 3- 'obj.getClass()': return package and class names of object.
+         * 4- 
          */
+
+        // -1 Single Inheritance
+        // Developer d1 = new Developer();
+        // d1.setName("Ahmed");
+        // System.out.println(d1.getName());
+
+        // -2 Multilevel Inheritance
+        // MobileDeveloper md1 = new MobileDeveloper();
+
+        // -3 using parameterized constructor
+        Developer d2 = new Developer("Ahmed", "ahmed@test.com", "0123456", "Eng dep", "Cairo", 2000, "LMS");
+        System.out.println(d2);
+
     }
 }
