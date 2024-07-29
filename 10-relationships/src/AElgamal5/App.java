@@ -43,5 +43,11 @@ public class App {
          * 4- Composition: Strong "HAS-A" relationship, represents a "part-of"
          * relationship where the child cannot exist independently
          */
+
+        Department d1 = new Department(1, "Eng");
+        Employee e1 = new Employee(123, 400, "Ahmed", "A.", "Elgamal", "AB+", "123456879", "Egyptian", 2000, d1);
+        Project p1 = new Project(456, "XYZ");
+
+        e1.work(p1);
     }
 }

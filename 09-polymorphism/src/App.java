@@ -44,7 +44,7 @@ public class App {
          * - Can't add '@Override' notation on static method in child class.
          * 
          * - we can reference child form parent class and not vice versa:
-         * Parent obj = new Child();
+         * Parent obj = new Child(); 
          * Child obj = new Parent(); //error
          * 
          * - With polymorphism we can achieve polymorphic aka generic array type:
