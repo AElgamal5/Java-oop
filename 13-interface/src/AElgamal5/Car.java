@@ -1,6 +1,7 @@
 package AElgamal5;
 
-public class Car implements Movable, SelfDrivable {
+public class Car extends Speed
+        implements Movable, SelfDrivable, CanLight, CanLight.CanLightBack, CanLight.CanLightFront, CanHorn, Marker {
     private int x;
     private int y;
     private int noOfSeats;
@@ -83,5 +84,25 @@ public class Car implements Movable, SelfDrivable {
     @Override
     public String toString() {
         return "Car [x=" + x + ", y=" + y + ", noOfSeats=" + noOfSeats + "]";
+    }
+
+    @Override
+    public void light() {
+        System.out.println("Car light");
+    }
+
+    @Override
+    public void frontLight() {
+        System.out.println("Car frontLight");
+    }
+
+    @Override
+    public void backLight() {
+        System.out.println("Car backLight");
+    }
+
+    @Override
+    public void horn() {
+        System.out.println("beep beep");
     }
 }

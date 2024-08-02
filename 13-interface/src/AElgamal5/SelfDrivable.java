@@ -13,4 +13,20 @@ public interface SelfDrivable {
     public static void hasSelfDrivable() {
         System.out.println("SelfDrivable from static");
     }
+
+    default void speedLimit() {
+        System.out.println("SelfDrivable speedLimit");
+    }
+
+    private void test() {
+        System.out.println("Private method");
+    }
+
+    default void defaultMethod() {
+        test();
+    }
+
+    default void defaultMethod2() {
+        test();
+    }
 }

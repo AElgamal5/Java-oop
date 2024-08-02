@@ -25,6 +25,8 @@ public class App {
          * 
          * - Local final vars are faster x2.5 times that regular vars.
          * 
+         * - Final classes can used to save constants of your app.
+         * 
          * - Summary:
          * 1- Final with vars: stops value change
          * 2- Final with methods: stops overriding
